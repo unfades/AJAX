@@ -51,3 +51,9 @@ like reading comments that come from the server on youtube,
 while the yt video is playing.
 
 if youtube was synchronous it would be out of business.
+
+a full page refresh happens when a page refreshes,
+
+ajax teaches us, if little data is changing, why refresh a whole page...
+
+it makes our sites better, 

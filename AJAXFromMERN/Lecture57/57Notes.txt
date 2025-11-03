@@ -1,0 +1,91 @@
+---------------------------------------------------------------------------
+
+STEP 1 Creating Object
+
+Make the object
+
+<script>
+    let ajaxreq = new XMLHttpRequest();
+</script>
+
+Step 2 Specify Handler
+
+When we use AJAX we can't be sure when the response will come back.
+
+So before we generate the request, we must first specify a function
+to be called when the response comes back from the server.
+This function is called a RESPONSE HANDLER.
+
+Tasks of Response Handler:
+
+A. Receive the info sentbyserver. -> xhr
+B. Extract the data. -> JSON
+C. Display the result at an appropriate place on the webpage. -> DOM
+
+xhr object property:
+
+Syntax: ajaxreq.onreadystatechange=<func name>;
+
+onreadystatechange is all lowercase. Because JS is case sensitive.
+No camel notation.
+
+that func name is the callback.
+
+xhr has onreadystatechange and readyState property.
+readyState has 5 values 0,1,2,3,4 and it changes 4 times,
+0-1,1-2,2-3,3-4.
+
+4 means the whole response has come from the server.
+Only after that do we want the code to run.
+
+function<function name>(){
+    if(ajaxreq.readyState === 4){
+        //do something with the data.
+    }
+}
+
+onreadystatechange --> all lower case
+readyState -> camel notation
+---------------------------------------------------------------------------------
+
+Total 5 values in readyState
+
+See the meaning in the slides.
+
+if condition is true once, and the handler was called 4 times.
+
+
+After we specify the handler we can send requests
+
+1, Opening the connection.
+2. 
+
+Before sending the requt we need to establis a connection to the 
+server which is done by calling the method open() of the 
+XMLHttpRequest object.
+
+It has the following prototype:
+
+open(method, utl, isasynchronous)
+
+WorldTimeAPI Page.
+
+isasyncrhonous is true or false.
+
+false is synchronous. true is asynchronous
+by default its value is true if it is not passed.
+
+a function name when passed to apis is called an api endpoint.
+
+arg/param is called a payload
+
+return value is called response
+
+in terms of APIs.
+
+Look at the slides for each alright...
+
+
+STATUS 200 means ALL is well from the server.
+
+continue from 53:00 lecture 57
