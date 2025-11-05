@@ -1,0 +1,219 @@
+Before AJAX, these are the topics you should know well...
+
+Basic JS - functions - objects
+DOM - Accessing HTML - applying CSS
+Event Handling - Click - KeyEvents - MouseEvents
+
+In CSS, RuleSets of CSS,
+applying classes in CSS, etc.
+
+------------------------------------------------------------
+
+Full form of AJAX is what
+
+Asynchronous JavaScript And XML
+
+Synchronous Vs Asynchronous programming?
+
+Synchronous means 1st instruction runs, then 2nd instruction runs,then 3rd etc..
+
+ex: 
+
+console.log("Adam");
+console.log("Raden");
+console.log("Sam");
+
+Asynchronous means
+
+
+in JS we know setTimeout()...
+
+ex: 
+
+console.log("Adam");
+setTimeout(() => {
+    console.log("Raden", 5000);
+});
+console.log("Sam");
+
+we don't really want the printing of Sam to happen later...
+like wait for Raden 5 seconds and then console.log Raden
+then Sam,
+
+
+if we seperate the setTimeout() code from the normal execution.
+And it happens in the background, and the normal printing takes place.
+The foreground activities work as intended, that is asynchronous programming.
+That is asynchronous programming.
+
+Stuff happening seperately is called asynchronous programming,
+like reading comments that come from the server on youtube,
+while the yt video is playing.
+
+if youtube was synchronous it would be out of business.
+
+a full page refresh happens when a page refreshes,
+
+ajax teaches us, if little data is changing, why refresh a whole page...
+
+it makes our sites better, less laggy.
+
+Like comparing W3Schools, it loads the whole page again even when a lot of things
+are not changing.
+When you click to go to another page, the top left circle loads making the whole page refresh.
+
+And Swiggy, it is made in React, similar to Ajax. When you click to make another page,
+then no top left circle loads.
+Ajax is similar to React like that. A single html page base being changed up.
+That is also why the URL does not change as well.
+There is no other page being loaded.
+Less bandwidth used, more data saved. Etc.
+
+------------------------------------------------------------------------------
+
+Swiggy renders on the client machine (browser)
+where our site is open.
+
+The data of restaurants is in Swiggy's servers.
+And their data is in a database.
+
+JS cannot directly communicate with Databases.
+
+Client code can communicate with server code.
+Using the internet.
+AJAX is therefore used there.
+
+The code at the server side is the API.
+APIs are backend written codes which connect
+The backend data with frontend's requests.
+That's all.
+
+It returns the data as a response to the client side
+as JavaScript and client side JS will be able to change
+that using DOM.
+
+API response will have data, it used to be in the XML
+style.
+Now it is outdated, and API responses are in the form
+of JSON format.
+
+To make that human understandable, the job is of JS.
+Sometimes server sends plaintext, sometimes HTML style,
+The most popular style in today is JSON.
+
+AJAX is more like AJAJ, the X in XML replaced with J in JSON.
+
+JavaScript Object Notation is the full form of JSON.
+
+If APIs are publicly available like weather data, booking ticket data,
+etc. It is called an OPEN API or PUBLIC API.
+
+Theres also PRIVATE APIS.
+
+Travelling applications can use holiday APIs.
+
+-------------------------------------------------------------------------
+
+AJAX retrieves from server's APIs.
+
+We can learn to call APIs and also make APIs.
+
+API designing is a part of backend.
+Express JS and NodeJS will have that part for making APIs.
+
+---------------------------------------------------------------
+
+HOW??
+
+JS code rquests from the server using XMLHttpRequest which is a special
+JavaScript object.
+
+Short term for it is xhr.
+
+xhr is now outdated, its modern version is the fetch API used in react.
+
+xhr and featch API both communicate with the server.
+
+AJAX's problem is AJAX code is very lengthy.
+fetchAPI makes AJAX code super short and nice, that is why it is most
+preferred.
+
+--------------------------------------------------------------------
+
+WORKING OF AJAX
+
+1. An event occurs on a webpage ex: a button is clicked.
+A normal button without submit button.
+
+That communication that can make a normal button talk to the server is AJAX's
+doing. 
+
+2. An HTTP request is sent to the server using XMLHttpRequest object.
+
+3. Process the HTTP request and creates a response.
+99% of the time it'll be JSON form. 1% something else.
+
+Then JS formats it, presents it, and updates the page content for the user.
+
+
+-----------------------------------------------------------------------
+
+STEPS of AJAX programming.
+
+Overall 4 steps. 
+
+1. Create Object for Ajax Request.
+let obj = new XMLHttpRequest(); // step 1 done object made of type XMLHttpRequest.
+
+2. Specify a Handler.
+Here we will make a function, it will handle the response from the server.
+We used to call them Callback functins but not we call them HANDLER functions.
+They run when response comes from the server.
+//This isthe Asynchronous part, code written but runs later...
+
+3. Send the request. 
+
+4. Retrieve the Data. Then show the data on the page with JS DOM after JSON data comes.
+
+-----------------------------------------------------------------------------
+
+
+WorldTimeAPI on that site you can see how that API looks like.
+key value pairs like JS objects.
+
+In JS keys dont have double quotes, but in JSON, keys have double quotes.
+If you can convert that into keys of JS, we can make it presentable in our sites.
+
+---------------------------------------------------------------------------
+
+STEP 1 Creating Object
+
+Make the object
+
+<script>
+    let ajaxreq = new XMLHttpRequest();
+</script>
+
+Step 2 Specify Handler
+
+When we use AJAX we can't be sure when the response will come back.
+
+So before we generate the request, we must first specify a function
+to be called when the response comes back from the server.
+This function is called a RESPONSE HANDLER.
+
+Tasks of Response Handler:
+
+A. Receive the info sentbyserver. -> xhr
+B. Extract the data. -> JSON
+C. Display the result at an appropriate place on the webpage. -> DOM
+
+xhr object property:
+
+Syntax: ajaxreq.onreadystatechange=<func name>;
+
+onreadystatechange is all lowercase. Because JS is case sensitive.
+No camel notation.
+
+that func name is the callback.
+
