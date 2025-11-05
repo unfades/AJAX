@@ -1,0 +1,11 @@
+What is a Promise?
+
+First know what is a callback.
+
+A callback is when a function name is passed as an argument into another function.
+Does callback have a role in AJAX?
+
+ES6 onwards we got the fetch API
+You cannot use it without understanding JS Promises.
+
+ES6 has made JS modern...
