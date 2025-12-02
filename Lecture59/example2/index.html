@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h2>AJAX Example 2-Create Object from JSON String</h2>
+
+		<p id="demo"></p>
+
+		<script>
+			let jsonData = '{"name":"Ravi", "age":30, "city":"Delhi"}';
+			let obj = JSON.parse(jsonData);
+			document.getElementById("demo").innerHTML =
+				obj.name + ", " + obj.age + "," + obj.city + "," + obj.gender;
+		</script>
+	</body>
+</html>

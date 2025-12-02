@@ -9,3 +9,4 @@ ES6 onwards we got the fetch API
 You cannot use it without understanding JS Promises.
 
 ES6 has made JS modern...
+
