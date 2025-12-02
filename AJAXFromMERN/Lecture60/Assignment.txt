@@ -30,3 +30,20 @@ region of the country like asia, south america, north america, etc etc
 and then the population of the country,
 and then the language of the country,
 and then the currency of the country...
+
+
+get the json data from the API
+
+then paste into jsonformatter website
+
+then you see the api returns an array
+of objects, witin it
+is country name,
+population, etc etc
+but you have to divide by 1 million
+for population
+
+you can also find the flag url
+also 
+
+all can be done using AJAX and DOM
