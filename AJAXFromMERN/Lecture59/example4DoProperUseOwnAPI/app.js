@@ -33,7 +33,7 @@ function showData(){
     timeZoneName = timeZoneList.value;
     let endPoint2 = endPoint + "/" + timeZoneName;
     xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = processResponse;
+    xhr.onreadystatechange = processTime;
     xhr.open("GET", endPoint2, true);
     xhr.send(null);
 }

@@ -18,13 +18,13 @@ function makePromise(currSec) {
 }
 
 function success(msg) {
-    sp1.innerHTML = "<br>" + msg;
-    sp2.innerHTML = "😂😂";
+    sp1.innerHTML = msg;
+    sp2.innerHTML = "Good Job! 😂😂";
     console.log("Success resolved");
 }
 function failure(msg) {
-    sp1.innerHTML = "<br>" + msg;
-    sp2.innerHTML = "😒😒";
+    sp1.innerHTML = msg;
+    sp2.innerHTML = "Better Luck Next Time! 😒😒";
     console.log("Failure resolved");
 }
 function doTask() {
