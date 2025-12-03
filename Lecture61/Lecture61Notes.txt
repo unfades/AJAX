@@ -1,0 +1,51 @@
+When were Async and Await introduced in JS?
+
+JavaScript Es8 onwards, that means in 2017,
+those two keywords are Async and Await in Es8.
+
+The async and the await are 2 keywords added to JS in 2017, Es8.
+
+When JS gives a new topic in order to simplify an older complex
+topic, that is called SYNTACTICAL SUGAR.
+
+Async Await are synctatical sugar over promises.
+
+In simple words we can say that they make async code look
+more like sync code.
+
+The async keyword is used to write functions that handle asynchronous actions.
+
+We wrap our asynchronous logic inside a function prependedwith the async keyword.
+
+writing async syntax:
+
+//like arrow functions () => arrow tells its an arrow func, async tells its an async func.
+async function myFunc(){
+    //body here
+};
+
+myFunc();
+
+It is simply for improved readability not performance.
+
+1. if you put async in a function in js, then
+
+it will get typecast into a Promise.
+If you return nothing then it will reurn 'undefined' into
+that Promise.
+
+Await is an operator.
+It is used before the func call which is expected to return a promise.
+
+It returns the resolved value of a promise.
+
+Can Async be used without Await?
+
+async can be use without await.
+but await cannot be used without async.
+
+await keyword can only be used inside an async function.
+
+Moreover sunce promises resolve in an indeterminate amount of time,
+the await operator halts or pauses the execution of our async
+function until a given promise is resolved.
