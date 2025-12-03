@@ -1,0 +1,17 @@
+Asynchronous is when code waits to run, when its time it runs.
+
+In Javascript whenever JS sees API Communication ie XHR, fetch, Promise,
+SetTimeout(),SetInterval(), JS takes it away from normal execution flow,
+when its time to run those, it runs those sure. But it also goes in the flow
+of synchronous programming.
+
+Meaning what is not waiting to run will run, what is waiting to run runs immediately
+when it is its time to run. That is asynchronous programming in JS.
+
+synchronous is when one line runs, then other lines run after it,
+asynchronous is when multiple pieces of code is running parallely.
+JS is single threaded but it is possible in JS.
+In Java this is only possible through multithreading.
+
+Interview purpose - It is NOT multithreaded. It is a single threaded language,
+that runs code line by line.
