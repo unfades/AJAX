@@ -44,9 +44,9 @@ function processTime() {
         let obj = JSON.parse(jsonStr);
         let dateTime = obj.datetime;
         let today = new Date(dateTime);
-        let dateStr = today.toLocaleString("en-US", {timezone: timeZoneName}) + "," + today.toLocaleTimeString();
+        let dateStr = today.toLocaleString("en-US", { timeZone: timeZoneName }) + "," + today.toLocaleTimeString();
         let globalDate = new Date(dateStr);
-        let response = today.toLocaleTimeString("en-US", {timezone: timeZoneName});
+        let response = today.toLocaleTimeString("en-US", { timeZone: timeZoneName });
         let span = document.getElementById("currentdatetime");
         span.innerHTML = response;
     }
