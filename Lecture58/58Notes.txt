@@ -1,4 +1,0 @@
-JSON is a really popular format for data interchange.
-
-In JS JSON is also an object.
-It has methods stringify and parse.

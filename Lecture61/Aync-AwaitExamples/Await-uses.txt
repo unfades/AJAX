@@ -1,4 +1,0 @@
-1. Await improves code readability.
-2. Await resolves the coming promise.
-3. It turns the code that was asynchronous without it into synchronous code.
-//as it asks the execution to "Await" it.
