@@ -1,0 +1,24 @@
+The use of promise chaining is imagine you doing this task.
+
+In an application you are getting the user from an api,
+thenyou are getting the services of the selected user
+from another api,
+then you are calculating the service cost for the users services
+using yet another api,
+
+this is happening of course in synchronous mode
+through promise chaining via .then().then()
+because you need one thing before you can use the other
+thing that is why.
+
+If you want to do Async Operations in sequence,
+then that is made synchronous.
+
+This is all being understood for fetch api.
+
+Remember that theres both catch() methods and catch keywords in JS
+both finally() method and finally keyword in js,
+works just like java but finally() are chained with .then()
+and also catch() are chained with then()
+
+async await, you use try, catch, finally keywords

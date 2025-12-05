@@ -1,0 +1,150 @@
+SLIDES NOTES 
+
+XMLHttpRequest was made in 2007...
+FetchAPI was made in 2015... it made that XMLHttpRequest way much better.
+
+Just like you can do getElementById() and also user querySelector() both 
+can accomplish the same task.
+The same way, FetchAPI and XMLHttpRequests are there.
+FetchAPI is much easier though,
+like a for loop being made when there was already a while loop.
+It was used for making asynchronous HTTP requests in the browser.
+
+Fetch API -
+
+it is similar to XMLHttpRequest(XHR) but:
+    it is a promise-based API of JavaScript.
+        promises are the modern way to write callback code.
+        XHR uses callbacks, AJAX uses callbacks,
+        FetchAPI handles those callbacks using promises.
+
+    it is simple and clean.
+    it provides more powerful features to fetch resources from the server.
+
+Fetch API is standardized now and supported by ALL MODERN BROWSERS.
+    fetch is also a property of the window object.
+    This means JS has made it a standard.
+    Whenever you use this in a browser, you can use it.
+
+Fetch is the modern way of doing server communication.
+                    AJAX            
+                  /      \
+             /               \
+       /                           \
+request                             response
+1 xhr object                             1 readystate check
+2 callbck ->onreadystatechange            2 status check
+3 open()                                 3 response 
+4 send()                                 4 convertedit
+                                         5 processed it
+
+IN Fetch API all this work is done with one function called fetch()
+
+fetch() -> returns promise remember that
+so you can use .then().then().then()
+
+fetch() is simple for those people that know how to handle promises.
+
+Now AJAX you can use when you are working on legacy applications,
+but if you are working on anything modern, then you will just use fetch API...
+for API calls.
+
+To use FetchAPI we call the fetch() method which requires only one parameter
+which is the URL of the resource that we want to fetch:
+
+It takes MULTIPLE arguments, all except one are optional.
+
+That is the URL or endpoint you are hitting.
+
+let response = fetch(url);
+
+and response variable it will take into it a promise. So response is a promise.
+
+Then you can do chaining on the fetch() method.
+And promise is getting resolved.
+You can do that using .then() method.
+And if any problem then you use .catch() method.
+
+simple code compared to XHR -> fetch()
+
+fetch(url).then(response =>{
+    //handle the response...
+}).catch(error =>{
+    //handle the error...
+});
+WAY EASIER, Just have working knowledge of using Promises and you're good to go!
+
+IMPORTANT POINTS ABOUT FETCH
+
+When the request completes the resource is available
+At this time the Promise will resolve into a Response object.
+
+Recall whenever you hit something on an API with XHR,
+it is JSON data, and that JSON data is gotten back AS IT IS.
+
+when you hit an api. it returns JSON data for example hit this
+
+api.github.com/users/YOUR_USERNAME_HERE
+
+and you can see that JSON object data that will get sent when that endpoint is used
+and gets hit.
+
+The same thing is coming in XHR.
+
+Now lets send this same request using Fetch API and see what fetch() method returns.
+
+--------------------------------------------------------------------------------------------------
+
+Fetch Returns Promise, and Promise returns the Response object see in example 1
+
+VERY IMPORTANT POINT!
+
+There is an important difference between the Response object in XHR and Fetch.
+
+In XHR, the property responseText returns the exact same data as returned by the server
+while the Response object from Fetch contains information about the response object itself.
+
+---------------------------------------------------------------------------------------------------
+
+RESPONSE OBJECT MEMBERS 
+
+The response object provides multiple promise based methods to access the body in various formats and
+two of its most popular methods are:
+
+response.text() - read the response and return as text.
+response.json() - parse the response as JSON.
+
+.text() returns text as promise
+and .json() returns JSON as promise.
+
+see example 2.
+
+both are promise-based methods,
+they give you data but wrapped in promises...
+So to extract the data then you need return the data,
+or straight return. and you can chain also look in example 3
+-----------------------------------------------------------------------------------------------------
+
+IMPORTANT POINTS ABOUT FETCH
+
+The response object also provides the status code and status text via the status and statusText properties.
+when a request is successful the status is 200 and statusText is OK.
+NOW, NOW,
+READ ABOUT THE TWIST in slides about Fetch API -
+
+ANOTHER IMPORTANT DIFFERENCE BETWEEN XHR AND FETCH IS THAT THE FETCH API WILL NOT THROW AN ERROR
+IF THE REQUEST RETURNS A 400 OR 500 STATUS CODE.
+
+RATHER IT WILL STILL BE MARKED AS A SUCCESSFUL RESPONSE AND PASSED TO THE 'then' function.
+
+that means .catch() will not run and it still goes into .then() even when theres a mistake
+//it runs as long as your network is fine.
+see example 4.
+To handle this then -
+//you can see the twist between xhr and fetch the catch didnt run
+//if you want it to run and handle 400 and 500 responses, we can write
+//custom logic using 'response.status'
+YOU WILL HAVE TO CHECK STATUS YOURSELF and adjust that
+and throw Error object in JS 
+See example 5.
+-----------------------------------------------------------------------------------------------------
