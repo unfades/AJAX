@@ -148,3 +148,5 @@ YOU WILL HAVE TO CHECK STATUS YOURSELF and adjust that
 and throw Error object in JS 
 See example 5.
 -----------------------------------------------------------------------------------------------------
+
+Bro that weather app now? It's like a 2 minute application straight up fam get it get it...

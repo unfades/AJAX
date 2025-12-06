@@ -1,0 +1,23 @@
+Assignments
+Assignment 1
+1. You need to do the code from FetchAPI exercise1
+with async-await alright, thats the first homework.
+
+You need to make another thing, that is an assignment like -
+Assignment 2
+2. in h1 tag -> Click the button to receive person details from server -
+The api to be used is this heres the url - "https://randomuser.me/api"
+it is a fake randome persons data from the world
+and a button that says show person
+The data will be a Response object as we have learned... It will return a Response object
+When clicked, you need to convert that to proper code the output should be -
+
+1. A loading animation when the button is clicked for like 1-2 seconds,
+then the user will change, then again when its clicked a short loading animation in the button,
+then the user will change thats what is needed.
+User details being displayed will be the users Full Name
+Their gender
+Their phone number thats it.
+
+You must not use XHR, you must use the fetch API and the fetch method...
+
