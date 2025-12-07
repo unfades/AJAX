@@ -1,7 +1,7 @@
 
 function showPerson(){
     let button = document.querySelector("#button");
-    button.innerHTML = '<img height = "20px" width = "40px" src = "https://usagif.com/wp-content/uploads/loading-96.gif">';
+    button.innerHTML = '<i class="fa fa-duotone fa-solid fa-spinner fa-spin"></i>';
     fetch("https://randomuser.me/api").then((response)=>{
         return response.json();
     }).then((user)=>{
