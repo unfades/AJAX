@@ -1,0 +1,36 @@
+html,body{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(to top, #000000,#ffae00);
+}
+
+*{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+img{
+    border-radius: 10px;
+    margin: 10px;
+}
+
+a{
+    color: aqua;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+input .button{
+    width: 10rem;
+    border: 15px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #00e1ff,#00c3dd);
+    border: solid #000000;
+}

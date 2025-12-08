@@ -1,0 +1,77 @@
+By default, the fetch API sends a GET request.
+But to send information to databases, we use POST requests.
+
+So you must also have knowledge of sending POST requests.
+
+fetch API can also be used to send HTTP POST requests.
+
+by default it is get, and we give it 1 argument that is the url or endpoint.
+
+fetch() can take a second argument, that is an Object as a second argument to fetch()
+and you need to send 3 properties with it,
+
+method, 
+headers,
+and body.
+
+not necessarily in the same order.
+--------------------------------------------------------------------------------------------
+method:A string that specifies which HTTP method to use in the request.
+body: A string with any data we want to give to the server in our request.
+headers: An object that allows us to add any headers we want our HTTP requests to include.
+--------------------------------------------------------------------------------------------
+method is a string, body is a string, and header is an object which needs key ad values
+key for the header is Content-Type that must be set by us.
+its possible values are: application/json, text/plain, application/x-www-form-urlencoded
+
+We will not decide the format on our own, we can only send the format that the server requires on its end.
+Now in most of the cases we SEND JSON data, so the value of the headers becomes:
+headers: {'Content-Type':'application/json'}
+---------------------------------------------------------------------------------------
+WHAT IS PASSED TO BODY -
+Since we want to send JSON data to the server, we must convert our value/object into a JSON string.
+
+imagine we made a form taking employee name, age, and job,
+and when a button is clicked
+we send that to the server via POST request.
+
+
+Then we have to use stringify in JS. JSON.stringify() turns JS data into JSON format as a string.
+JSON.stringify() method and pass inside the value/object to be converted as an argument.
+
+So the code looks like:
+
+body: JSON.stringify(data)
+----------------------------------------------------------------------------------------------
+RESPONSE FOR POST REQUEST 
+
+in GET requests, everything is fine means status 200,
+
+in the case of POST, if everything is fine it generally returns status code 201,
+These conventions are followed normally by servers.
+If not 201, it can return values from 200-299
+
+response.ok is used and it is a shorthand for checking that the status is in the range 200-299
+inclusive and returns a boolean value.
+-----------------------------------------------------------------------------------------------
+HOW TO CHECK FOR ERROR?
+
+We used to check by saying like 
+
+if(response.status !== 201){
+    console.log("Error in response");
+}else{
+    return response.json();
+}
+
+THE SAME WAY you can also do this, not just in post requests also in GET requests too
+
+if(response.status !== response.ok){
+    console.log("Error in response");
+}else{
+    return response.json();
+}
+--------------------------------------------------------------------------------------------------
+
+Now do the exercise in the slides
+

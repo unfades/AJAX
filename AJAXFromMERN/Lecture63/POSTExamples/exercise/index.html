@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="container">
+
+        <h1>Click The Button To Send User Data to API</h1>
+        <p>First Name:<br><input type="text" name = "firstName"></p>
+        <p>Last Name:<br><input type="text" name = "lastName"></p>
+        <p>Job Title:<br><input type="text" name = "jobTitle"></p>
+        <input class="button" id="button" value="Send Data" onclick="sendData()" type="button">
+        <div id="detail">
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

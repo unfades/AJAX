@@ -1,0 +1,30 @@
+Write a fetch API based application to send USER Details
+to the REQ-RES API. It should include first_name, last_name,
+and job_title.
+
+Finally print the response returned by the server which contains
+ID and TIMESTAMP
+
+The url to be requested is htttps://reqres.in/api/users
+
+keep in mind it is a dummy server, you can send it anything,
+
+it returns us the ID and also the time at which it was sent to it.
+
+see the demo of it then lets make an application from it.
+
+got to reqres.in scroll down and click the POST option,
+you can see what is the endpoint there,
+and what is the response it gives back
+status 201 if everything is good, 
+and along with it our object we sent,
+an id of that object,
+and also the time at which it was created.
+
+//THE EXERCISE DOESNT WORK BECAUSE THESE DAYS YOU NEED AN API KEY AS WELL THAT YOU HAVE TO MAKE 
+NOWADAYS...
+
+IMPROVE YOUR CSS SKILLS NOW AND REVISE JS DOM, FETCH, PROMISES, JSON OBJECTS, METHODS, thats it
+THEN YOU CAN GO FOR MERN AND YOU WILL STRAIGHT UP KILL IT.
+
+//MAKE ALL THE PROJECTS WE HAVE ALREADY MADE WITH FETCH AND START MAKING YOUR OWN 
