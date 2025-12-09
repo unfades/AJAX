@@ -1,0 +1,14 @@
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(to bottom, #4d0000,#000000);
+    color: rgb(0, 253, 63);
+}
+
+button{
+    border-radius: 2px;
+}
