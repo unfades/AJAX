@@ -5,8 +5,16 @@ function loadTimeZones(){
         return response.json();
     }).then((data)=>{
         select = document.querySelector("select");
-        data.forEach((country)=>{
-            select.innerHTML +=`<option>${country.name.common}</option>`;
+        let arr = [];
+        let i = 0;
+        data.forEach((country) =>{
+            arr[i++] = country.name.common;
+        });
+        //learn js lambda function again
+        arr = arr.sort();
+        console.log(arr);
+        arr.forEach((country)=>{
+            select.innerHTML +=`<option>${country}</option>`;
         });
     }).catch((error)=>{
         alert(error);
@@ -27,7 +35,7 @@ function viewCountry(){
         //failed let currency = data[0].currencies[0].symbol; because currencies is an object not arr
         //revise accessing objects, arrays, in general etc 
         let currency = Object.values(data[0].currencies)[0].symbol;
-
+        //revise dom for proper adding elements to the dom
         console.log("the country name is " + countryName);
         console.log("the country flagUrl is " + flagpngUrl);
         console.log("the country region is " + region);
